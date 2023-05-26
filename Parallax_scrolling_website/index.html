@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parallax Scrolling Website | Vanilla Javascript</title>
+        <link rel="stylesheet" type="text/css" href="Styles.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">logo</a>
+            <ul>
+                <li><a href="#" class ="active">Home</a> </a></li>
+                <li><a href="#">About </a></li>
+                <li><a href="#">Work </a></li>
+                <li><a href="#">Contract </a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="stars.png" id="stars">
+            <img src="moon.png" id="moon">
+            <img src="mountains_behind.png" id="mountains_behind">
+            <h2 id="text">Moon Light</h2>
+            <a href="#sec" id="btn">Explore</a>
+            <img src="mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec" id="sec">
+            <h2>Parallax Scrollong Effects</h2>
+            <p>"Wake up to reality! Nothing ever goes as planned in this accursed world.
+            The longer you live, the more you realize that the only things that truly exist in this reality are merely pain, suffering and futility.
+             Listen, everywhere you look in this world, wherever there is light, there will always be shadows to be found as well. 
+             As long as there is a concept of victors, the vanquished will also exist. 
+             The selfish intent of wanting to preserve peace, initiates war. and hatred is born in order to protect love. 
+             There are nexuses causal relationships that cannot be separated.
+             want to sever the fate of this world.
+             A world of only victors, a world of only peace, a world of only love.
+             I will create such a world.
+             I am...
+             THE GHOST OF THE UCHIHA!..
+             And truly this reality is a hell."" - Madara Uchiha.
+             <br><br>“There are many types of monsters that scare me:
+              Monsters who cause trouble without showing themselves, monsters who abduct children,
+               monsters who devour dreams,
+                monsters who suck blood... and then, monsters who tell nothing but lies.
+                 Lying monsters are a real nuisance: They are much more cunning than others.
+                 They pose as humans even though they have no understanding of the human heart; 
+                 they eat even though they've never experienced hunger; they study even though they have no interest in academics;
+                  they seek friendship even though they do not know how to love. If I were to encounter such monsters, I would likely be eaten by them... because in truth, I am that monster.”
+             ― L Lawliet.<br><br>"Everything that you thought had meaning: every hope, dream, or moment of happiness.
+              None of it matters as you lie bleeding out on the battlefield.
+               None of it changes what a speeding rock does to a body, we all die. 
+               But does that mean our lives are meaningless? Does that mean that there was no point in our being born? Would you say that of our slain comrades? What about their lives? Were they meaningless?... 
+               They were not! Their memory serves as an example to us all! The courageous fallen! 
+               The anguished fallen! 
+               Their lives have meaning because we the living refuse to forget them! 
+               And as we ride to certain death, we trust our successors to do the same for us! 
+               Because my soldiers do not buckle or yield when faced with the cruelty of this world! 
+               My soldiers push forward! 
+               My soldiers scream out! 
+               My soldiers RAAAAAGE!" - Erwin Smith.
+               <br><br>"My name is Yoshikage Kira. 
+               I'm 33 years old. 
+               My house is in the northeast section of Morioh, where all the villas are, and I am not married. 
+               I work as an employee for the Kame Yu department stores, and I get home every day by 8 PM at the latest. 
+               I don't smoke, but I occasionally drink. I'm in bed by 11 PM, and make sure I get eight hours of sleep, no matter what. 
+               After having a glass of warm milk and doing about twenty minutes of stretches before going to bed, I usually have no problems sleeping until morning. 
+               Just like a baby, I wake up without any fatigue or stress in the morning. I was told there were no issues at my last check-up. 
+               I'm trying to explain that I'm a person who wishes to live a very quiet life. I take care not to trouble myself with any enemies, like winning and losing, that would cause me to lose sleep at night. 
+               That is how I deal with society, and I know that is what brings me happiness. Although, if I were to fight I wouldn't lose to anyone" - Kira Yoshikage
+            </p>
+        </div>
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mountains_behind = document.getElementById('mountain_behind');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let mountains_front = document.getElementById('mountains_front');
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * 1.05 + 'px';
+                mountains_behind.style.top = value * 0.5 + 'px';
+                mountains_front.style.top = value * 0 + 'px';
+                text.style.marginRight = value * 4 + 'px';
+                text.style.marginTop = value * 1.5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+    </body>
+</html>
